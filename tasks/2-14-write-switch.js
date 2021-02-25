@@ -16,4 +16,3 @@ switch (number) {
     alert('You entered number 2 or 3');
     break;
 }
-

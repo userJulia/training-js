@@ -9,9 +9,3 @@ if (browser === 'Edge') {
 } else {
   alert('We hope that this page looks ok!');
 }
-
-
-
-
-
-
