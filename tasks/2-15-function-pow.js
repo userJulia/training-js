@@ -1,17 +1,16 @@
 'use strict';
 
-const x = prompt('enter x');
-const n = prompt('enter n');
-
-function getPower(x, n) {
-  if (n >= 1) {
-    alert(x ** n);
-  } else {
-    alert('use natural number');
-  }
+function getPower() {
+  const x = prompt('enter x');
+  const n = prompt('enter n');
+    if (n >= 1) {
+      return x ** n;
+    } else {
+      return 'use natural number';
+    }
 }
 
-getPower(x, n);
+alert(getPower());
 
 /*
 const age = prompt('your age');
@@ -26,7 +25,6 @@ function checkAge(age) {
 
 checkAge(age);
 
-
 const age = prompt('your age');
 
 function checkAge(age) {
@@ -40,20 +38,18 @@ checkAge(age);
 */
 
 /* if - ?
-const age = prompt('your age');
-
 function checkAge(age) {
-  (age > 18) ? true : confirm('parents allow');
+  const age = prompt('your age');
+  return (age > 18) ? true : confirm('parents allow');
 }
 
 checkAge(age);
 */
 
 /* if - ||
-const age = prompt('your age');
-
 function checkAge(age ) {
-
+  const age = prompt('your age');
+  return age > 18 || confirm('parents confirm');
 }
 
 checkAge(age);

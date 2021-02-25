@@ -1,15 +1,12 @@
 'use strict';
 
-const a = prompt('enter a');
-const b = prompt('enter b');
-
-function getMinValue(a, b) {
-  if (a <= b) {
-    alert(a);
-  } else {
-    alert(b);
-  }
+function getMinValue() {
+  const a = prompt('enter a');
+  const b = prompt('enter b');
+    if (a <= b) {
+    return a;
+    } else {
+    return b;
+    }
 }
- getMinValue(a, b);
-
-
+ alert (getMinValue());
