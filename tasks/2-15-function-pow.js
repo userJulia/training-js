@@ -3,11 +3,11 @@
 function getPower() {
   const x = prompt('enter x');
   const n = prompt('enter n');
-    if (n >= 1) {
-      return x ** n;
-    } else {
-      return 'use natural number';
-    }
+  if (n >= 1) {
+    return x ** n;
+  } else {
+    return 'use natural number';
+  }
 }
 
 alert(getPower());
