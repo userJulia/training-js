@@ -4,8 +4,7 @@ function Accumulator(startingValue = 1) {
   this.value = startingValue;
 
   this.read = function read() {
-    this.number = +prompt('enter number');
-    this.value += this.number;
+    this.value += +prompt('enter number');
   }
 }
 
