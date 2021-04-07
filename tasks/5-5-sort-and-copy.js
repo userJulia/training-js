@@ -2,14 +2,13 @@
 
 let arr = ['HTML', 'JavaScript', 'CSS'];
 
-let copyArr = arr.slice();
+let copiedArray = arr.slice();
 
-function copySorted(copyArr) {
-  copyArr.sort();
-  return copyArr;
+function copySorted(copiedArray) {
+  return copiedArray.sort();
 }
 
-let sorted = copySorted(copyArr);
+let sorted = copySorted(copiedArray);
 
 console.log(sorted); // CSS, HTML, JavaScript
 console.log(arr); // HTML, JavaScript, CSS

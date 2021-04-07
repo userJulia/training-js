@@ -18,10 +18,10 @@ function getAverageAge(users) {
 console.log(getAverageAge(users)); // (25 + 30 + 29) / 3 = 28
 
 function getMiddleAge(users) {
-  let age = users.reduce(function(result, item) {
-    return result + item.age;
+  return users.reduce((result, item, i, arr) => {
+    result += item.age;
+    return i === arr.length - 1 ? result/arr.length : result;
   }, 0);
-  return age/users.length;
 }
 
 /* arrow-function

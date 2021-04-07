@@ -8,7 +8,7 @@ let arr = [john, pete, mary];
 
 function sortByAge(arr) {
   arr.sort(function(item1, item2) {
-    if(item1.age > item2.age) {
+    if(item1.age >= item2.age) {
       return 1;
     } else {
       return -1;
