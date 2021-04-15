@@ -1,43 +1,44 @@
 'use strict';
 
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 29 };
+const john = { name: 'John', age: 25 };
+const pete = { name: 'Pete', age: 30 };
+const mary = { name: 'Mary', age: 29 };
 
-let users = [ john, pete, mary ];
+const users = [john, pete, mary];
 
-function getAverageAge(users) {
+const getAverageAge = (usersArray) => {
   let totalAge = 0;
 
-  users.forEach(function(item) {
+  usersArray.forEach((item) => {
     totalAge += item.age;
   });
-  return totalAge/users.length;
-}
+  return totalAge / usersArray.length;
+};
 
 console.log(getAverageAge(users)); // (25 + 30 + 29) / 3 = 28
 
-function getMiddleAge(users) {
-  return users.reduce((result, item, i, arr) => {
-    result += item.age;
-    return i === arr.length - 1 ? result/arr.length : result;
+const getMiddleAge = (usersArray) => {
+  const middleAge = usersArray.reduce((result, item, i, arr) => {
+    const sumAge = result + item.age;
+    return i === arr.length - 1 ? sumAge / arr.length : sumAge;
   }, 0);
-}
+  return middleAge;
+};
 
 /* arrow-function
-function getMiddleAge(users) {
-  return users.reduce((result, item) => result + item.age, 0) /users.length;
+function getMiddleAge(usersArray) {
+  return usersArray.reduce((result, item) => result + item.age, 0) /usersArray.length;
 }
 */
 
-console.log(getMiddleAge(users));//28
+console.log(getMiddleAge(users));// 28
 
-//return sum [1, 2, 13, 15, -1]
+// return sum [1, 2, 13, 15, -1]
 
-let arr = [1, 2, 13, 15, -1];
+const arr = [1, 2, 13, 15, -1];
 
-let sum = arr.reduce(function(result, item) {
+const sum = arr.reduce((result, item) => {
   return result + item;
 }, 0);
 
-console.log(sum);//30
+console.log(sum);// 30
