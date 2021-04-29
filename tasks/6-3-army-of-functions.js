@@ -1,17 +1,17 @@
 'use strict';
 
-function makeArmy() {
+const makeArmy = () => {
   let shooters = [];
 
   for (let i = 0; i < 10; i++) {
     // such cycle creates a new lexical environment for i
-    let shooter = function () {
+    let shooter = () => {
       console.log(i);
     };
     shooters.push(shooter);
   }
   return shooters;
-}
+};
 
 let army = makeArmy();
 
