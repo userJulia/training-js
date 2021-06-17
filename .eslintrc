@@ -13,6 +13,7 @@
     "strict": "off",
     "no-restricted-syntax": ["error", "WithStatement"],
     "no-plusplus": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "no-extend-native": "warn"
   }
 }
